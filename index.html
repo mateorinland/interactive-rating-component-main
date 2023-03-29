@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <main>
+    <section class="rating-state grid-flow">
+      <div class="image-container">
+        <img src="./images/icon-star.svg" alt="">
+      </div>
+      <div class="grid-flow">
+        <h1 class="rating-title">How did we do?</h1>
+        <p class="rating-prompt">Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>
+      </div>
+      <form>
+        <fieldset class="rating-fieldset">
+            <input type="radio" name="rating" value="1">1
+            <input type="radio" name="rating" value="2">2
+            <input type="radio" name="rating" value="3">3
+            <input type="radio" name="rating" value="4">4
+            <input type="radio" name="rating" value="5">5
+            <br>
+            <input class="submit-button" type="submit" value="SUBMIT">
+        </fieldset>
+      </form>
+    </section>
+    
+    <section class="thank-you-state">
+      <div class="grid-flow">
+        <img src="./images/illustration-thank-you.svg" alt="">
+        <div class="feedback-pill">
+          <p>You selected <!-- Add rating here --> out of 5</p>
+        </div>
+      </div>
+      <div class="grid-flow">
+        <h2 class="thank-you-title">Thank you!</h2>
+        <p class="thank-you-text">We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Coded by <a href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/">Mateo Rinland</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  </footer>
+</body>
+</html>

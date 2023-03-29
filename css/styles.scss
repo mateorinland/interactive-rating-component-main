@@ -1,0 +1,80 @@
+@import "reset";
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light_Grey: hsl(217, 12%, 63%);
+$Medium_Grey: hsl(216, 12%, 54%);
+$Dark_Blue: hsl(213, 19%, 18%);
+$Very_Dark_Blue: hsl(216, 12%, 8%);
+
+body {
+    background-color: $Very_Dark_Blue;
+    font-size: 0.9375rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    color: $Light_Grey;
+}
+
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        align-items: end;
+    }
+}
+
+.grid-flow {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rating-state {
+    background-color: hsl(215,24%,14%);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-width: 50%;
+}
+
+.image-container {
+    background-color: $Dark_Blue;
+    box-sizing: content-box;
+    padding: 1rem;
+    width: 1rem;
+    border-radius: 2rem;
+}
+
+.rating-title {
+    color: $White;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.rating-fieldset {
+    border: none;
+    padding: 0;
+}
+
+.submit-button {
+    background-color: $Orange;
+    color: $White;
+    border: none;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
