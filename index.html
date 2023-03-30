@@ -12,7 +12,7 @@
 </head>
 <body>
   <main>
-    <section class="rating-state grid-flow">
+    <section class="rating-state grid-flow" data-spacing="large">
       <div class="image-container">
         <img src="./images/icon-star.svg" alt="">
       </div>
@@ -23,20 +23,26 @@
       </div>
       <form>
         <fieldset class="rating-fieldset">
-            <input type="radio" name="rating" value="1">1
-            <input type="radio" name="rating" value="2">2
-            <input type="radio" name="rating" value="3">3
-            <input type="radio" name="rating" value="4">4
-            <input type="radio" name="rating" value="5">5
-            <br>
+          <div class="radio-buttons-container">
+            <input class="radio-button" id="radio-button-1" type="radio" name="rating" value="1">
+            <label class="radio-label" for="radio-button-1">1</label>
+            <input class="radio-button" id="radio-button-2" type="radio" name="rating" value="2">
+            <label class="radio-label" for="radio-button-2">2</label>
+            <input class="radio-button" id="radio-button-3" type="radio" name="rating" value="3">
+            <label class="radio-label" for="radio-button-3">3</label>
+            <input class="radio-button" id="radio-button-4" type="radio" name="rating" value="4">
+            <label class="radio-label" for="radio-button-4">4</label>
+            <input class="radio-button" id="radio-button-5" type="radio" name="rating" value="5" checked>
+            <label class="radio-label" for="radio-button-5">5</label>
+          </div>
             <input class="submit-button" type="submit" value="SUBMIT">
         </fieldset>
       </form>
     </section>
     
-    <section class="thank-you-state">
+    <section class="thank-you-state grid-flow" data-spacing="large">
       <div class="grid-flow">
-        <img src="./images/illustration-thank-you.svg" alt="">
+        <img class="thank-you-image" src="./images/illustration-thank-you.svg" alt="">
         <div class="feedback-pill">
           <p>You selected <!-- Add rating here --> out of 5</p>
         </div>
