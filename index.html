@@ -12,19 +12,21 @@
 </head>
 <body>
   <main>
+
+    <!-- RATING STATE (DEFAULT) -->
     <section class="rating-state grid-flow" data-spacing="large">
       <div class="image-container">
         <img src="./images/icon-star.svg" alt="">
       </div>
       <div class="grid-flow">
         <h1 class="rating-title">How did we do?</h1>
-        <p class="rating-prompt">Please let us know how we did with your support request. All feedback is appreciated 
-          to help us improve our offering!</p>
       </div>
       <form>
         <fieldset class="rating-fieldset">
+          <legend class="rating-prompt">Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!</legend>
           <div class="radio-buttons-container">
-            <input class="radio-button" id="radio-button-1" type="radio" name="rating" value="1">
+            <input class="radio-button" id="radio-button-1" type="radio" name="rating" value="1" required>
             <label class="radio-label" for="radio-button-1">1</label>
             <input class="radio-button" id="radio-button-2" type="radio" name="rating" value="2">
             <label class="radio-label" for="radio-button-2">2</label>
@@ -33,18 +35,19 @@
             <input class="radio-button" id="radio-button-4" type="radio" name="rating" value="4">
             <label class="radio-label" for="radio-button-4">4</label>
             <input class="radio-button" id="radio-button-5" type="radio" name="rating" value="5" checked>
-            <label class="radio-label" for="radio-button-5">5</label>
+            <label class="radio-label selected" for="radio-button-5">5</label>
           </div>
-            <input class="submit-button" type="submit" value="SUBMIT">
+          <button class="submit-button">SUBMIT</button>
         </fieldset>
       </form>
     </section>
     
+    <!-- THANK-YOU STATE -->
     <section class="thank-you-state grid-flow" data-spacing="large">
       <div class="grid-flow">
         <img class="thank-you-image" src="./images/illustration-thank-you.svg" alt="">
         <div class="feedback-pill">
-          <p>You selected <!-- Add rating here --> out of 5</p>
+          <p class="feedback-text">You selected <!-- Add rating here --> out of 5</p>
         </div>
       </div>
       <div class="grid-flow">
@@ -59,5 +62,7 @@
     Coded by <a href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/">Mateo Rinland</a>.
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   </footer>
+  <script src="/script.js"></script>
+
 </body>
 </html>

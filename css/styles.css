@@ -101,6 +101,11 @@ main {
   flex-direction: column;
 }
 
+/*** RATING STATE ***/
+.thank-you-state {
+  display: none;
+}
+
 .rating-state {
   background-color: hsl(215, 24%, 14%);
   border-radius: 1.5rem;
@@ -136,6 +141,7 @@ main {
   margin: 1rem 0;
 }
 
+/* RADIO BUTTON */
 .radio-button {
   display: none;
 }
@@ -159,11 +165,12 @@ main {
   color: hsl(0, 0%, 100%);
 }
 
-.radio-label:active {
+.selected {
   background-color: hsl(25, 97%, 53%);
   color: hsl(0, 0%, 100%);
 }
 
+/* SUBMIT BUTTON */
 .submit-button {
   background-color: hsl(25, 97%, 53%);
   color: hsl(0, 0%, 100%);
@@ -179,8 +186,12 @@ main {
   color: hsl(25, 97%, 53%);
 }
 
-.thank-you-state {
+/*** THANK-YOU STATE ***/
+.rating-state.hide {
   display: none;
+}
+
+.thank-you-state.show {
   background-color: hsl(215, 24%, 14%);
   border-radius: 1.5rem;
   padding: 2rem;
