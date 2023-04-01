@@ -63,7 +63,6 @@ main {
     }
 }
 
-
 .image-container {
     background-color: $Dark_Blue;
     box-sizing: content-box;
@@ -163,9 +162,15 @@ main {
     background-color: hsl(215,24%,14%);
     border-radius: 1.5rem;
     padding: 2rem;
-    max-width: 50%;
     text-align: center;
 }
+
+@media (min-width: 600px) {
+    .thank-you-state.show {
+        max-width: 50%;
+    }
+}
+
 
 .thank-you-image {
     margin: 0 auto;
