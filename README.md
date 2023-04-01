@@ -1,4 +1,4 @@
-# WIP Interactive rating component
+# Interactive rating component
 
 My solution for Frontend Mentor's Interactive rating component challenge.
 
