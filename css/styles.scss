@@ -13,21 +13,29 @@ body {
     font-family: 'Overpass', sans-serif;
     font-weight: 400;
     color: $Light_Grey;
-}
-
-@media (min-width: 600px) {
-    body {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        align-items: end;
-    }
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    align-items: end;
+    padding: 1.5rem;
 }
 
 .grid-flow {
     display: grid;
     align-content: start;
     gap: 1rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 main {
@@ -47,8 +55,14 @@ main {
     background-color: hsl(215,24%,14%);
     border-radius: 1.5rem;
     padding: 2rem;
-    max-width: 50%;
 }
+
+@media (min-width: 600px) {
+    .rating-state {
+        max-width: 50%;
+    }
+}
+
 
 .image-container {
     background-color: $Dark_Blue;
@@ -80,22 +94,27 @@ main {
 
 /* RADIO BUTTON */
 
-.radio-button {
-    display: none;
+.radio-input {
+    appearance: none;
 }
 
 .radio-label {
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
     border-radius: 50%;
-    padding: 1.5rem;
+    padding: 1.3rem;
     background-color: $Dark_Blue;
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 1rem;
+    height: 1rem;
     text-align: center;
     font-weight: 700;
+}
+
+@media (min-width: 600px) {
+    .radio-label {
+        padding: 1.6rem;
+    }
 }
 
 .radio-label:hover {
@@ -103,7 +122,7 @@ main {
     color: $White;
 }
 
-.selected {
+.radio-label:active {
     background-color: $Orange;
     color: $White;
 }
@@ -111,6 +130,7 @@ main {
 /* SUBMIT BUTTON */
 
 .submit-button {
+    cursor: pointer;
     background-color: $Orange;
     color: $White;
     border: none;
@@ -118,11 +138,18 @@ main {
     width: 100%;
     padding: 1rem 0.5rem 0.5rem;
     font-weight: 700;
+    margin-top: 0.7rem;
+    letter-spacing: 0.1rem;
 }
 
-.submit-button:hover, .submit-button:focus-visible {
+.submit-button:not(:disabled):hover, .submit-button:not(:disabled):focus-visible {
     background-color: $White;
     color: $Orange;
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: default;
 }
 
 /*** THANK-YOU STATE ***/
@@ -132,6 +159,7 @@ main {
 }
 
 .thank-you-state.show {
+    display: block;
     background-color: hsl(215,24%,14%);
     border-radius: 1.5rem;
     padding: 2rem;
