@@ -1,3 +1,8 @@
+/*---------------------------
+ ** CSS Reset
+-----------------------------*/
+/* See https://piccalil.li/blog/a-modern-css-reset/
+
 /* Box sizing rules */
 *,
 *::before,
@@ -33,8 +38,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -46,8 +51,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -66,9 +71,9 @@ select {
   *,
   *::before,
   *::after {
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -93,10 +98,10 @@ body {
 
 .sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.067rem;
+  height: 0.067rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.067rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -121,7 +126,7 @@ main {
   padding: 2rem;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
   .rating-state {
     max-width: 50%;
   }
@@ -174,12 +179,12 @@ main {
   font-weight: 700;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
   .radio-label {
     padding: 1.6rem;
   }
 }
-.radio-label:hover {
+.radio-label:hover, .radio-label:checked {
   background-color: hsl(217, 12%, 63%);
   color: hsl(0, 0%, 100%);
 }
@@ -203,7 +208,8 @@ main {
   letter-spacing: 0.1rem;
 }
 
-.submit-button:not(:disabled):hover, .submit-button:not(:disabled):focus-visible {
+.submit-button:not(:disabled):hover,
+.submit-button:not(:disabled):focus-visible {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
 }
@@ -226,7 +232,7 @@ main {
   text-align: center;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
   .thank-you-state.show {
     max-width: 50%;
   }
@@ -251,10 +257,10 @@ main {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.733rem;
   text-align: center;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.attribution-link {
+  color: #5875ec;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,79 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Interactive rating component</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-  <main>
-
-    <!-- RATING STATE (DEFAULT) -->
-    <section class="rating-state grid-flow" data-spacing="large">
-      <div class="image-container">
-        <img src="./images/icon-star.svg" alt="">
-      </div>
-      <div class="grid-flow">
-        <h1 class="rating-title">How did we do?</h1>
-        <p class="rating-prompt">Please let us know how we did with your support request. All feedback is appreciated 
-          to help us improve our offering!</p>
-      </div>
-      <form class="js-rating-form">
-        <fieldset class="rating-fieldset">
-          <legend class="sr-only">Please rate our service:</legend>
-          <div class="radio-buttons-container">
-            <label class="radio-label" for="radio-button-1">
-              <input class="radio-input" id="radio-button-1" type="radio" name="rating" value="1" required>
-              <span class="radio-number">1</span>
-            </label>
-            <label class="radio-label" for="radio-button-2">
-              <input class="radio-input" id="radio-button-2" type="radio" name="rating" value="2">
-              <span class="radio-number">2</span>
-            </label>
-            <label class="radio-label" for="radio-button-3">
-              <input class="radio-input" id="radio-button-3" type="radio" name="rating" value="3">
-              <span class="radio-number">3</span>
-            </label>
-            <label class="radio-label" for="radio-button-4">
-              <input class="radio-input" id="radio-button-4" type="radio" name="rating" value="4">
-              <span class="radio-number">4</span>
-            </label>
-            <label class="radio-label" for="radio-button-5">
-              <input class="radio-input" id="radio-button-5" type="radio" name="rating" value="5">
-              <span class="radio-number">5</span>
-            </label>
-          </div>
-          <button class="submit-button" type="submit" disabled>SUBMIT</button>
-        </fieldset>
-      </form>
-    </section>
-    
-    <!-- THANK-YOU STATE -->
-    <section class="thank-you-state grid-flow" data-spacing="large">
-      <div class="grid-flow">
-        <img class="thank-you-image" src="./images/illustration-thank-you.svg" alt="">
-        <div class="feedback-pill">
-          <p class="feedback-text">You selected <!-- Add rating here --> out of 5</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="A Frontend Mentor challenge for web development. This one is a card component with two states:
+    the initial one which asks the user for a rating out of 5 stars that then flips into the thank-you state."
+  />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Interactive rating component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- RATING STATE (DEFAULT) -->
+      <section class="rating-state grid-flow" data-spacing="large">
+        <div class="image-container">
+          <img src="./images/icon-star.svg" alt="" />
         </div>
-      </div>
-      <div class="grid-flow">
-        <h2 class="thank-you-title">Thank you!</h2>
-        <p class="thank-you-text">We appreciate you taking the time to give a rating. If you ever need more support, 
-          don’t hesitate to get in touch!</p>
-      </div>
-    </section>
-  </main>
+        <div class="grid-flow">
+          <h1 class="rating-title">How did we do?</h1>
+          <p class="rating-prompt">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <form class="js-rating-form">
+          <fieldset class="rating-fieldset">
+            <legend class="sr-only">Please rate our service:</legend>
+            <div class="radio-buttons-container">
+              <label class="radio-label" for="radio-button-1">
+                <input
+                  class="radio-input"
+                  id="radio-button-1"
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  required
+                />
+                <span class="radio-number">1</span>
+              </label>
+              <label class="radio-label" for="radio-button-2">
+                <input
+                  class="radio-input"
+                  id="radio-button-2"
+                  type="radio"
+                  name="rating"
+                  value="2"
+                />
+                <span class="radio-number">2</span>
+              </label>
+              <label class="radio-label" for="radio-button-3">
+                <input
+                  class="radio-input"
+                  id="radio-button-3"
+                  type="radio"
+                  name="rating"
+                  value="3"
+                />
+                <span class="radio-number">3</span>
+              </label>
+              <label class="radio-label" for="radio-button-4">
+                <input
+                  class="radio-input"
+                  id="radio-button-4"
+                  type="radio"
+                  name="rating"
+                  value="4"
+                />
+                <span class="radio-number">4</span>
+              </label>
+              <label class="radio-label" for="radio-button-5">
+                <input
+                  class="radio-input"
+                  id="radio-button-5"
+                  type="radio"
+                  name="rating"
+                  value="5"
+                />
+                <span class="radio-number">5</span>
+              </label>
+            </div>
+            <button class="submit-button" type="submit" disabled>SUBMIT</button>
+          </fieldset>
+        </form>
+      </section>
 
-  <footer class="attribution">
-    Coded by <a href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/">Mateo Rinland</a>.
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  </footer>
-  <script src="/script.js"></script>
+      <!-- THANK-YOU STATE -->
+      <section class="thank-you-state grid-flow" data-spacing="large">
+        <div class="grid-flow">
+          <img
+            class="thank-you-image"
+            src="./images/illustration-thank-you.svg"
+            alt=""
+          />
+          <div class="feedback-pill">
+            <p class="feedback-text">
+              You selected
+              <!-- Add rating here -->
+              out of 5
+            </p>
+          </div>
+        </div>
+        <div class="grid-flow">
+          <h2 class="thank-you-title">Thank you!</h2>
+          <p class="thank-you-text">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </section>
+    </main>
 
-</body>
+    <footer>
+      <p class="attribution">
+        Coded by
+        <a
+          class="attribution-link"
+          href="https://www.linkedin.com/in/mateo-rinland-9b1a93bb/"
+          aria-label="Mateo Rinland's LinkedIn profile"
+          >Mateo Rinland</a
+        >. Challenge by
+        <a
+          class="attribution-link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >.
+      </p>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
 </html>
