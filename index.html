@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-    name="description"
-    content="A Frontend Mentor challenge for web development. This one is a card component with two states:
+      name="description"
+      content="A Frontend Mentor challenge for web development. This one is a card component with two states:
     the initial one which asks the user for a rating out of 5 stars that then flips into the thank-you state."
-  />
+    />
     <link
       rel="icon"
       type="image/png"
@@ -41,57 +41,61 @@
           <fieldset class="rating-fieldset">
             <legend class="sr-only">Please rate our service:</legend>
             <div class="radio-buttons-container">
-              <label class="radio-label" for="radio-button-1">
+              <div class="single-button-container">
                 <input
-                  class="radio-input"
+                  class="radio-input visually-hidden"
                   id="radio-button-1"
                   type="radio"
                   name="rating"
                   value="1"
                   required
                 />
-                <span class="radio-number">1</span>
-              </label>
-              <label class="radio-label" for="radio-button-2">
+                <label class="radio-label" for="radio-button-1">1</label>
+              </div>
+
+              <div class="single-button-container">
                 <input
-                  class="radio-input"
+                  class="radio-input visually-hidden"
                   id="radio-button-2"
                   type="radio"
                   name="rating"
                   value="2"
                 />
-                <span class="radio-number">2</span>
-              </label>
-              <label class="radio-label" for="radio-button-3">
+                <label class="radio-label" for="radio-button-2">2</label>
+              </div>
+
+              <div class="single-button-container">
                 <input
-                  class="radio-input"
+                  class="radio-input visually-hidden"
                   id="radio-button-3"
                   type="radio"
                   name="rating"
                   value="3"
                 />
-                <span class="radio-number">3</span>
-              </label>
-              <label class="radio-label" for="radio-button-4">
+                <label class="radio-label" for="radio-button-3">3</label>
+              </div>
+
+              <div class="single-button-container">
                 <input
-                  class="radio-input"
+                  class="radio-input visually-hidden"
                   id="radio-button-4"
                   type="radio"
                   name="rating"
                   value="4"
                 />
-                <span class="radio-number">4</span>
-              </label>
-              <label class="radio-label" for="radio-button-5">
+                <label class="radio-label" for="radio-button-4">4</label>
+              </div>
+
+              <div class="single-button-container">
                 <input
-                  class="radio-input"
+                  class="radio-input visually-hidden"
                   id="radio-button-5"
                   type="radio"
                   name="rating"
                   value="5"
                 />
-                <span class="radio-number">5</span>
-              </label>
+                <label class="radio-label" for="radio-button-5">5</label>
+              </div>
             </div>
             <button class="submit-button" type="submit" disabled>SUBMIT</button>
           </fieldset>

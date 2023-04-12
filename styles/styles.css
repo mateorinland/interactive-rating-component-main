@@ -108,6 +108,21 @@ body {
   border-width: 0;
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 0.067rem;
+  margin: -0.067rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.067rem;
+}
+
+/* MAIN */
 main {
   display: flex;
   align-items: center;
@@ -115,7 +130,7 @@ main {
   flex-direction: column;
 }
 
-/*** RATING STATE ***/
+/** RATING STATE **/
 .thank-you-state {
   display: none;
 }
@@ -159,11 +174,18 @@ main {
   margin: 1rem 0;
 }
 
-/* RADIO BUTTON */
+/*** RADIO BUTTON ***/
+.single-button-container {
+  position: relative;
+}
+
 .radio-input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .radio-label {
@@ -184,7 +206,13 @@ main {
     padding: 1.6rem;
   }
 }
-.radio-label:hover, .radio-label:checked {
+.radio-label:hover,
+.radio-label:checked {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
+.radio-input:checked + .radio-label {
   background-color: hsl(217, 12%, 63%);
   color: hsl(0, 0%, 100%);
 }
@@ -194,7 +222,7 @@ main {
   color: hsl(0, 0%, 100%);
 }
 
-/* SUBMIT BUTTON */
+/*** SUBMIT BUTTON ***/
 .submit-button {
   cursor: pointer;
   background-color: hsl(25, 97%, 53%);
@@ -219,7 +247,7 @@ main {
   cursor: default;
 }
 
-/*** THANK-YOU STATE ***/
+/** THANK-YOU STATE **/
 .rating-state.hide {
   display: none;
 }
@@ -256,6 +284,7 @@ main {
   font-size: 1.7rem;
 }
 
+/* CONTENTINFO */
 .attribution {
   font-size: 0.733rem;
   text-align: center;
