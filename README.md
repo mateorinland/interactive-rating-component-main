@@ -2,9 +2,9 @@
 
 My solution for Frontend Mentor's Interactive rating component challenge.
 
-Using HTML5, CSS3 and SASS, JavaScript ES2022.
+Using HTML5, CSS3 + SASS, JavaScript ES2022.
 * Semantic markup.
-* Accessibility (landmarks, alt text).
+* Audited by Lighthouse and Accessibility Insights.
 * Mobile-first workflow.
 * Grid and flexbox.
 
